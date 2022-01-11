@@ -13,15 +13,42 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
+  width: 1600px;
+  margin: 0 auto;
   color: var(--main-text-color);
   letter-spacing: 0.02em;
   background-color: var(--white);
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+  padding: 0px;
+}
 .list {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0px auto;
+}
+.section {
+  outline: solid red;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /* Шапка и навигация */
+.page-header {
+  border-bottom: 1px solid var(--header-bgc);
+}
 .page-header .web-logo {
   font-family: Raleway;
   font-weight: 700;
@@ -40,46 +67,74 @@ body {
   text-decoration: none;
   color: var(--accent);
 }
-.main-nav .nav-link.current {
+.nav .link.current {
   color: var(--accent);
 }
-.main-nav,
-.nav-link {
+
+.nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   font-weight: 500;
   line-height: 1.1;
   text-decoration: none;
   color: var(--second-text-color);
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.nav .link:hover,
+.nav .link:focus {
   color: var(--accent);
 }
 
-.main-nav-contacts,
-.main-nav-tel,
-.main-nav-mail {
+.nav .list {
+  display: flex;
+  margin-left: 93px;
+}
+.nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+.contacts .tel,
+.contacts .mail {
+  margin-right: 50px;
   font-weight: 500;
   line-height: 1.1;
   text-decoration: none;
   color: var(--main-text-color);
 }
-.main-nav-mail {
+.contacts .mail {
+  margin-right: 0px;
   color: var(--accent);
 }
-.main-nav-tel:hover,
-.main-nav-tel:focus {
+.contacts .tel:hover,
+.contacts .tel:focus {
   color: var(--accent);
 }
-.main-nav-mail:hover,
-.main-nav-mail:focus {
+.contacts .mail:hover,
+.contacts .mail:focus {
   color: var(--main-text-color);
 }
 
 /*  Герой и мейн секция */
 
-.hero,
-.hero-title {
+.hero {
+  padding-top: 200px;
+  padding-bottom: 280px;
+  background-color: var(--footer-bgc);
+}
+
+.hero .title {
+  outline: solid red;
+  width: 696px;
+  margin: 0 auto;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.3;
@@ -89,26 +144,29 @@ body {
   color: var(--white);
   background-color: var(--footer-bgc);
 }
-
-.hero .hero-button {
+.btn {
+  display: flex;
+  justify-content: center;
+}
+.hero .button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.8;
+  margin-top: 30px;
+
   width: 200px;
   height: 50px;
-  left: 700px;
-  top: 430px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: var(--white);
   background-color: var(--accent);
 }
 
-.hero .hero-button {
+.hero .button {
   cursor: pointer;
 }
-.hero .hero-button:hover,
-.hero .hero-button:focus {
+.hero .button:hover,
+.hero .button:focus {
   background-color: var(--team-bgc);
   color: var(--second-text-color);
 }
@@ -118,8 +176,17 @@ body {
 .features-header {
   display: none;
 }
-
-.features-title {
+.features {
+  display: flex;
+}
+.features .item {
+  width: 270px;
+}
+.features .item:not(:last-child) {
+  margin-right: 30px;
+}
+.features .title {
+  margin-bottom: 10px;
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: 0.03em;
@@ -127,14 +194,24 @@ body {
   color: var(--second-text-color);
 }
 
-.features-text {
+.features .text {
   line-height: 1.7;
   letter-spacing: 0.03em;
 }
 
 /* Чем мы занимаемся */
+.about .img {
+  display: flex;
 
-.about > .about-title {
+  margin-top: 50px;
+  margin-bottom: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.about .card:not(:last-child) {
+  margin-right: 30px;
+}
+.about .title {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.1;
@@ -144,17 +221,36 @@ body {
 }
 
 /* Наша команда */
-.team .team-header {
+.team {
+  background-color: var(--team-bgc);
+}
+.team .header {
+  margin-bottom: 50px;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.1;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
-  background-color: var(--team-bgc);
 }
+.team .list {
+  display: flex;
+}
+.team .card {
+  height: 368px;
+  background: var(--white);
 
-.team-title {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team .card:not(:last-child) {
+  margin-right: 30px;
+}
+.team .title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.1;
@@ -162,7 +258,8 @@ body {
   color: var(--second-text-color);
 }
 
-.team-text {
+.team .text {
+  text-align: center;
   font-size: 16px;
   line-height: 1.1;
   letter-spacing: 0.03em;
@@ -171,9 +268,15 @@ body {
 /* Футер */
 
 .footer {
+  margin: 0 auto;
+  height: 252px;
   background-color: var(--footer-bgc);
 }
+
 .footer .web-logo {
+  display: block;
+  padding-top: 60px;
+  margin-bottom: 20px;
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -191,29 +294,39 @@ body {
   text-decoration: none;
   color: var(--accent);
 }
-
-.footer .adress-text {
+.footer .adress {
+  width: 231px;
+}
+.footer .text {
+  margin-bottom: 9px;
   font-style: normal;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--white);
 }
-
-.footer-tel,
-.footer-mail {
-  font-weight: 500;
+.footer .tel {
+  display: block;
+  margin-bottom: 9px;
+}
+.footer .mail {
+  display: block;
+  margin-bottom: 60px;
+}
+.footer .tel,
+.footer .mail {
+  font-weight: 400;
   line-height: 1.1;
   font-style: normal;
   text-decoration: none;
   color: var(--mail-text);
 }
 
-.footer-tel:hover,
-.footer-tel:focus {
+.footer .tel:hover,
+.footer .tel:focus {
   color: var(--accent);
 }
-.footer-mail:hover,
-.footer-mail:focus {
+.footer .mail:hover,
+.footer .mail:focus {
   color: var(--accent);
 }
 /* Страница Портфолио */
@@ -271,7 +384,7 @@ body {
   border-radius: 4px;
 }
 
-.filter:hover,
+.filter-button:hover,
 .filter:focus {
   background-color: var(--accent);
   color: var(--white);

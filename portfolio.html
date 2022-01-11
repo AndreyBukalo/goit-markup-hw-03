@@ -10,6 +10,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+            integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css">
     <title>Portfolio</title>
 </head>
@@ -17,25 +20,30 @@
 <body>
     <!-- Шапка  Портфолио-->
 <header class="page-header">
-    <a class="web-logo" href="./index.html"><span class="studio-logo">Web</span>Studio</a>
-    <nav>
-        <ul class="main-nav list">
-            <li class="nav"> <a class="nav-link" href="./index.html">Студия</a></li>
-            <li class="nav"> <a class="nav-link current" href="./portfolio.html">Портфолио</a></li>
-            <li class="nav"> <a class="nav-link" href="">Контакты</a></li>
-        </ul>
-    </nav>
-    <div class=main-nav-contacts>
-        <a class="main-nav-tel" href="tel:+380961111111">+38 096 111 11 11</a>
-        <a class="main-nav-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+    <div class="container header-nav">
+        <a class="web-logo" href="./index.html"><span class="studio-logo">Web</span>Studio</a>
+        <nav class="nav">
+            <ul class="list">
+                <li class="item"> <a class="link" href="./index.html">Студия</a></li>
+                <li class="item"> <a class="link current" href="./portfolio.html">Портфолио</a></li>
+                <li class="item"> <a class="link" href="">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class=contacts>
+            <a class="tel" href="tel:+380961111111">+38 096 111 11 11</a>
+            <a class="mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </div>
     </div>
 </header>
+
 
     <!--Мейн-->
     <main>
 
         <!--Кнопки фильтра-->
-        <section class="projects-filter">
+        <div class="container">
+        <section class="filter section">
+            
             <h2 class="filter-header">Меню фильтра</h2>
             <!--Заголовок скрыт-->
             <ul class="filter-button list">
@@ -55,9 +63,13 @@
                     <button class="filter marketing" type="button">Маркетниг</button>
                 </li>
             </ul>
+          
         </section>
+        </div>
         <!-- Проекты-->
-        <section class="projects">
+        <div class="container">
+        <section class="projects section">
+            
             <h1 class="projects-header">Примеры проектов</h1>
             <!--Заголовок скрыт-->
             <ul class="projects list">
@@ -118,19 +130,22 @@
                 </li>
             </ul>
 
-
+            
         </section>
+        </div>
     </main>
 
 
 
 <footer class="footer">
+    <div class="container">
     <a class="web-logo" href="./index.html"><span class="studio-logo">Web</span>Studio</a>
     <address class="main-adress">
         <p class="adress-text"> г. Киев, пр-т Леси Украинки, 26</p>
         <a class="footer-tel" href="tel:+380961111111">+38 096 111 11 11</a>
         <a class="footer-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
     </address>
+    </div>
 
 </footer>
 </body>
