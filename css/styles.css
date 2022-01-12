@@ -27,7 +27,6 @@ h5,
 h6,
 p {
   margin: 0px;
-  padding: 0px;
 }
 .list {
   margin: 0;
@@ -144,7 +143,7 @@ p {
   color: var(--white);
   background-color: var(--footer-bgc);
 }
-.btn {
+.btn-hero {
   display: flex;
   justify-content: center;
 }
@@ -330,11 +329,13 @@ p {
   color: var(--accent);
 }
 /* Страница Портфолио */
-.filter-header {
+.filter .header {
   display: none;
 }
-
-.filter-button .filter {
+.filter {
+  padding-bottom: 34px;
+}
+.filter-button .btn {
   font-family: Roboto;
   font-weight: 500;
   font-size: 16px;
@@ -345,7 +346,14 @@ p {
   background: var(--team-bgc);
   border-radius: 4px;
 }
+.filter-button {
+  display: flex;
+  justify-content: center;
+}
 
+.filter-button li:not(:last-child) {
+  margin-right: 8px;
+}
 .all {
   width: 73px;
   height: 38px;
@@ -384,18 +392,24 @@ p {
   border-radius: 4px;
 }
 
-.filter-button:hover,
-.filter:focus {
+.btn:hover,
+.btn:focus {
   background-color: var(--accent);
   color: var(--white);
 }
-.filter {
+.btn {
   cursor: pointer;
 }
 .projects-header {
   display: none;
 }
-
+.projects {
+  padding-top: 0px;
+}
+.projects-img {
+  display: flex;
+  flex-wrap: wrap;
+}
 .pojects-exmpl {
   text-decoration: none;
 }
