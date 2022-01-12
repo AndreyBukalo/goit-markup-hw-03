@@ -13,12 +13,12 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
-  width: 1600px;
   margin: 0 auto;
   color: var(--main-text-color);
   letter-spacing: 0.02em;
   background-color: var(--white);
 }
+
 h1,
 h2,
 h3,
@@ -44,7 +44,6 @@ img {
   margin: 0px auto;
 }
 .section {
-  outline: solid red;
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -135,7 +134,6 @@ img {
 }
 
 .hero .title {
-  outline: solid red;
   width: 696px;
   margin: 0 auto;
   font-weight: 900;
@@ -151,7 +149,7 @@ img {
   display: flex;
   justify-content: center;
 }
-.hero .button {
+.hero .btn {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.8;
@@ -165,11 +163,11 @@ img {
   background-color: var(--accent);
 }
 
-.hero .button {
+.hero .btn {
   cursor: pointer;
 }
-.hero .button:hover,
-.hero .button:focus {
+.hero .btn:hover,
+.hero .btn:focus {
   background-color: var(--team-bgc);
   color: var(--second-text-color);
 }
@@ -307,14 +305,16 @@ img {
   letter-spacing: 0.03em;
   color: var(--white);
 }
-.footer .tel {
-  display: block;
-  margin-bottom: 9px;
-}
+
 .footer .mail {
+  margin-bottom: 9px;
   display: block;
-  margin-bottom: 60px;
 }
+.footer .tel {
+  margin-bottom: 60px;
+  display: block;
+}
+
 .footer .tel,
 .footer .mail {
   font-weight: 400;
