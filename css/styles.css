@@ -151,7 +151,7 @@ img {
 
 .hero {
   padding-top: 200px;
-  padding-bottom: 280px;
+  padding-bottom: 200px;
 
   background-color: var(--footer-bgc);
 }
@@ -168,14 +168,13 @@ img {
   text-transform: uppercase;
   color: var(--white);
 }
-.btn-hero {
-  display: flex;
-  justify-content: center;
-}
+
 .hero .btn {
+  display: block;
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
+  margin: 0 auto;
   margin-top: 30px;
 
   width: 200px;
@@ -257,10 +256,12 @@ img {
 .team .card:not(:last-child) {
   margin-right: 30px;
 }
+.card-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .team .title {
-  margin-top: 30px;
   margin-bottom: 10px;
-
   text-align: center;
   font-size: 16px;
   font-weight: 500;
@@ -270,8 +271,6 @@ img {
 }
 
 .team .text {
-  padding-bottom: 30px;
-
   text-align: center;
   font-size: 16px;
   line-height: calc(19 / 16);
@@ -279,24 +278,24 @@ img {
 }
 
 /* Футер */
-
 .footer {
-  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer {
   background-color: var(--footer-bgc);
 }
 
 .footer .studio {
   display: block;
-  padding-top: 60px;
+
   margin-bottom: 20px;
   color: var(--white);
 }
 .footer .web {
   color: var(--accent);
 }
-.footer .adress {
-  width: 231px;
-}
+
 .footer .text {
   margin-bottom: 9px;
   font-style: normal;
@@ -306,11 +305,10 @@ img {
 }
 
 .footer .mail {
-  margin-bottom: 9px;
   display: block;
+  margin-bottom: 9px;
 }
 .footer .tel {
-  padding-bottom: 51px;
   display: block;
 }
 
@@ -318,8 +316,8 @@ img {
 .footer .mail {
   font-weight: 400;
   line-height: calc(24 / 14);
-  font-style: normal;
   text-decoration: none;
+  font-style: normal;
   color: var(--mail-text);
 }
 
@@ -333,9 +331,6 @@ img {
 }
 /* Страница Портфолио */
 
-.filter {
-  padding-bottom: 34px;
-}
 .filter-button .btn {
   font-family: Roboto;
   font-weight: 500;
@@ -350,6 +345,7 @@ img {
 .filter-button {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .filter-button li:not(:last-child) {
@@ -404,9 +400,6 @@ img {
 
 /* Проекты  */
 
-.projects {
-  padding-top: 0px;
-}
 .projects .cards {
   display: flex;
   flex-wrap: wrap;
@@ -446,5 +439,7 @@ img {
 
 .content {
   padding: 20px 24px;
+  border-left: 1px solid var(--porfolio-bgc);
+  border-right: 1px solid var(--porfolio-bgc);
   border-bottom: 1px solid var(--porfolio-bgc);
 }
