@@ -2,10 +2,11 @@
   --main-text-color: #757575; /* Основной цвет текста */
   --second-text-color: #212121; /* Вторичный цвет текста  */
   --accent: #2196f3; /* Акцент,цвет кнопок ссылок лого */
+  --button-color: #2196f3; /* Цвет кнопок */
   --header-bgc: #ececec; /* фон хедера  */
   --porfolio-bgc: #eeeeee; /* фон портфолио */
   --team-bgc: #f5f4fa; /* фон команды */
-  --footer-bgc: #2f303a; /* фон футера и героя */
+  --footer-bgc: #2f303a; /* фон футера */
   --white: #fff; /* белый цвет  */
   --mail-text: rgba(255, 255, 255, 0.6); /* цвет контактов футера  */
 }
@@ -32,6 +33,19 @@ img {
   display: block;
   max-width: 100%;
 }
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 .list {
   margin: 0;
   padding: 0;
@@ -43,31 +57,37 @@ img {
   padding-right: 15px;
   margin: 0px auto;
 }
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+.header {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 /* Шапка и навигация */
 .page-header {
   border-bottom: 1px solid var(--header-bgc);
 }
-.page-header .web-logo {
-  font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  color: var(--second-text-color);
-}
-.page-header .studio-logo {
-  font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  text-decoration: none;
+.page-header .web {
   color: var(--accent);
+}
+.page-header .studio {
+  color: var(--second-text-color);
 }
 .nav .link.current {
   color: var(--accent);
@@ -104,16 +124,16 @@ img {
   display: flex;
   margin-left: auto;
 }
-.contacts .tel,
-.contacts .mail {
-  margin-right: 50px;
+.contacts .mail,
+.contacts .tel {
+  margin-right: 0px;
   font-weight: 500;
   line-height: 1.1;
   text-decoration: none;
   color: var(--main-text-color);
 }
 .contacts .mail {
-  margin-right: 0px;
+  margin-right: 50px;
   color: var(--accent);
 }
 .contacts .tel:hover,
@@ -160,7 +180,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: var(--white);
-  background-color: var(--accent);
+  background-color: var(--button-color);
 }
 
 .hero .btn {
@@ -174,9 +194,6 @@ img {
 
 /* Приемущества */
 
-.features-header {
-  display: none;
-}
 .features {
   display: flex;
 }
@@ -212,14 +229,6 @@ img {
 .about .card:not(:last-child) {
   margin-right: 30px;
 }
-.about .title {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.1;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--second-text-color);
-}
 
 /* Наша команда */
 .team {
@@ -227,13 +236,8 @@ img {
 }
 .team .header {
   margin-bottom: 50px;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 1.1;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--second-text-color);
 }
+
 .team .list {
   display: flex;
 }
@@ -274,25 +278,13 @@ img {
   background-color: var(--footer-bgc);
 }
 
-.footer .web-logo {
+.footer .studio {
   display: block;
   padding-top: 60px;
   margin-bottom: 20px;
-  font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  text-decoration: none;
   color: var(--white);
 }
-.footer .studio-logo {
-  font-family: Raleway;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  text-decoration: none;
+.footer .web {
   color: var(--accent);
 }
 .footer .adress {
@@ -333,9 +325,7 @@ img {
   color: var(--accent);
 }
 /* Страница Портфолио */
-.filter .header {
-  display: none;
-}
+
 .filter {
   padding-bottom: 34px;
 }
@@ -398,15 +388,15 @@ img {
 
 .btn:hover,
 .btn:focus {
-  background-color: var(--accent);
+  background-color: var(--button-color);
   color: var(--white);
 }
 .btn {
   cursor: pointer;
 }
-.projects .header {
-  display: none;
-}
+
+/* Проекты  */
+
 .projects {
   padding-top: 0px;
 }
