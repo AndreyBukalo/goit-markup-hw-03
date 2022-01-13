@@ -442,7 +442,7 @@ img {
 
 .content {
   padding: 20px 24px;
-  border-right: 1px solid var(--porfolio-bgc);
-  border-left: 1px solid var(--porfolio-bgc);
+  /* border-right: 1px solid var(--porfolio-bgc);
+  border-left: 1px solid var(--porfolio-bgc); */
   border-bottom: 1px solid var(--porfolio-bgc);
 }
