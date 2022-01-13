@@ -196,7 +196,9 @@ img {
 
 .features {
   display: flex;
+  padding-bottom: 0px;
 }
+
 .features .item {
   width: 270px;
 }
